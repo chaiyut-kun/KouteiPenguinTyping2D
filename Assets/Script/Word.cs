@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 
 [System.Serializable]
@@ -7,10 +8,12 @@ public class Word
 {
     public string word;
     private int type_idx;
-
-    public Word(string _word) 
+    WordDisplay display;
+    public Word(string _word , WordDisplay _display) 
     {
         word = _word;
+        display = _display;
+        display.Setword(word);
     }
 
     public char NextLetter()
@@ -21,6 +24,7 @@ public class Word
     public void TypeLetter() 
     {
         type_idx++;
+        display.RemoveLetter();
     }
     
     public bool WordTyped()
@@ -28,6 +32,7 @@ public class Word
         bool word_typed = (type_idx >= word.Length);
         if (word_typed)
         {
+            display.RemoveWord();
             // Detroy Word
         }
         return word_typed;

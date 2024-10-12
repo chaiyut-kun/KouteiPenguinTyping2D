@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class WordSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject word_prefab;
+    public Transform canvas;
+    public WordDisplay SpawnWord()
     {
+        Vector3 random_position = new Vector3(Random.Range(-10f,15f),25f);
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject word_obj = Instantiate(word_prefab , random_position , Quaternion.identity ,canvas);
+        WordDisplay word_display = word_obj.GetComponent<WordDisplay>();
+        return word_display;
     }
 }
