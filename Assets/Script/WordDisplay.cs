@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WordDisplay : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    private float fall_speed = 1f;
+    private float fall_speed = 2f;
     public void Setword(string word)
     {
         text.text = word;   

@@ -9,7 +9,7 @@ public class WordTimer : MonoBehaviour
 {
     public WordManager word_manager; 
     
-    public float delay = 6f;
+    public float delay = 2f;
     private float nextword_time = 1f;
 
     private void Update()
