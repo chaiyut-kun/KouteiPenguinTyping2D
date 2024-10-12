@@ -81,7 +81,7 @@ public class WordManager : MonoBehaviour
     private void IsNextLevel()
     {
         
-        if (score % 20 == 0 )
+        if (score % 120 == 0 )
         {
             Score.SetScore(score);
             animator.SetBool("NextLvl",true);

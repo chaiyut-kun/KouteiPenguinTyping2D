@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class WordDisplay : MonoBehaviour
 {
@@ -10,7 +12,8 @@ public class WordDisplay : MonoBehaviour
     private float fall_speed = 2f;
     public void Setword(string word)
     {
-        text.text = word;   
+        text.text = word;
+		IncreaseSpeed();
     }
     
     public void RemoveLetter ()
@@ -28,5 +31,9 @@ public class WordDisplay : MonoBehaviour
 	{
 		transform.Translate(0f, -fall_speed * Time.deltaTime, 0f);
 	}
+	private void IncreaseSpeed()
+    {
+		fall_speed += 0.25f;
+    }
     
 }
