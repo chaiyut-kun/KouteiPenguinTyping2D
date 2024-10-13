@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class WordDisplay : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    private float fall_speed = 2f;
+    private float fall_speed = 10f;
     public void Setword(string word)
     {
         text.text = word;
@@ -33,7 +33,7 @@ public class WordDisplay : MonoBehaviour
 	}
 	private void IncreaseSpeed()
     {
-		fall_speed += 0.25f;
+		fall_speed += 0.025f;
     }
     
 }

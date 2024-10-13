@@ -19,6 +19,14 @@ public class WordInput : MonoBehaviour
                     word_mnger.ClickNext();
                 }
             }
+            if (SceneManager.GetActiveScene().name == "DeathScene")
+            {
+                if(Input.anyKey)
+                {
+                    SceneManager.LoadScene("Level1");
+                }
+            }
+            
         }
     }
 }

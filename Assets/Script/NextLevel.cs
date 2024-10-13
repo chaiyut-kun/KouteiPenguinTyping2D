@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     private static string[] scene_names = {"Level1","Level2","Level3"};
-    private static int scene_idx = 0;
+    private static int scene_idx = 1;
 
     public static void LoadLevel() 
     {
@@ -15,9 +15,14 @@ public class NextLevel : MonoBehaviour
             SceneManager.LoadScene("NextScene");
 
         }
+
         else 
         {
             SceneManager.LoadScene(scene_names[++scene_idx]);
+            if (scene_idx == 2)
+            {
+                scene_idx = -1;
+            }
         }
             
     }

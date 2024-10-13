@@ -20,4 +20,8 @@ public static class Score
     {
         score = _score;
     }
+    public static void Reset()
+    {
+        score = 0;
+    }
 }

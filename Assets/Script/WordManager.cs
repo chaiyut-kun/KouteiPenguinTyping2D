@@ -15,10 +15,13 @@ public class WordManager : MonoBehaviour
     private Word active_word;
     public WordSpawner word_spawner;
     public TextMeshProUGUI point;
+    public TextMeshProUGUI penguin_health;
     public int score = 0;
+    private int health = 0;
     public Animator animator;
     public TextMeshProUGUI nextlvl;
     private bool nextlvl_status;
+    private int deadzone = -30;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,9 @@ public class WordManager : MonoBehaviour
             score = Score.GetScore();    
         }
         point.text = score.ToString();
+
+        health = PlayerHeart.GetHealth();
+        penguin_health.text = health.ToString();
         CheckScene();
         
     }
@@ -49,6 +55,10 @@ public class WordManager : MonoBehaviour
                 active_word.TypeLetter();
                 animator.SetBool("Typing",true);
             }
+            else 
+            {
+                WrongType();
+            }
         }
         else 
         {
@@ -67,10 +77,13 @@ public class WordManager : MonoBehaviour
         if (has_active_word && active_word.WordTyped()) 
         {
             animator.SetTrigger("Typed");
+            
             score += 10;
             point.text = score.ToString();
+            
             has_active_word = false;
 			words.Remove(active_word);
+            
             animator.SetBool("Typing",false);
             IsNextLevel();
             
@@ -81,19 +94,17 @@ public class WordManager : MonoBehaviour
     private void IsNextLevel()
     {
         
-        if (score % 120 == 0 )
+        if (score % 10 == 0 )
         {
+            
+            
             Score.SetScore(score);
             animator.SetBool("NextLvl",true);
             
-            // nextlvl_status = true;
             NextScene();
             ClickNext();
         }
-        // else 
-        // {
-        //     nextlvl_status = false;
-        // }
+        
     }
 
     private void NextScene() 
@@ -120,12 +131,62 @@ public class WordManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "NextScene")
         {
             StartCoroutine(SceneBlink());
+            animator.SetBool("NextLvl",true);
+        }
+        else if (SceneManager.GetActiveScene().name == "DeathScene")
+        {
+            StartCoroutine(SceneBlink());
+
+            point.text = score.ToString();
+            Score.Reset();
+
+            penguin_health.text = health.ToString();
+            PlayerHeart.Reset();
+            animator.SetBool("IsAlive",false);
         }
             
+    }
+
+    private void WrongType()
+    {
+        health -=1;
+        PlayerHeart.SetHealth(health);
+        animator.SetTrigger("WrongType");
+        penguin_health.text = health.ToString();
+        IsAlive();
+        
+    }
+
+    public void IsAlive()
+    {
+        if(!PlayerHeart.IsAlive())
+        {
+
+            animator.SetBool("IsAlive",false);
+            SceneManager.LoadScene("DeathScene");
+        }
+    }
+
+    private void DeadZone()
+    {
+        for (int i = words.Count - 1; i >= 0; i--)
+        {
+            if (words[i].display.transform.position.y < deadzone)
+            {
+                health -= 5;
+                PlayerHeart.SetHealth(health);
+                animator.SetTrigger("WrongType");
+                penguin_health.text = health.ToString();
+
+                words[i].OutOfZone();
+                words.RemoveAt(i);  // ลบ word ออก
+                IsAlive();
+            }
+        }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        DeadZone();
     }
 }

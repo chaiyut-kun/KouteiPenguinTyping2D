@@ -8,7 +8,7 @@ public class Word
 {
     public string word;
     private int type_idx;
-    WordDisplay display;
+    public WordDisplay display;
     public Word(string _word , WordDisplay _display) 
     {
         word = _word;
@@ -36,6 +36,11 @@ public class Word
             // Detroy Word
         }
         return word_typed;
+    }
+
+    public void OutOfZone()
+    {
+        display.RemoveWord();
     }
     
     // Start is called before the first frame update

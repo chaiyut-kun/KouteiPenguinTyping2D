@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerHeart : MonoBehaviour
+public static class PlayerHeart 
 {
-    // Start is called before the first frame update
-    void Start()
+    private static int health = 10;
+
+
+    public static void SetHealth(int _health)
     {
-        
+        health = _health;
+    }
+    public static int GetHealth()
+    {
+        return health;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static bool IsAlive()
     {
-        
+        if (health <= 0)
+        {
+            return false;
+        }
+        return true;
     }
+    
+    public static void Reset()
+    {
+        health = 10;
+    }
+    
 }
