@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class PlayerHeart 
 {
-    private static int health = 10;
+    private static int health = 50;
 
 
     public static void SetHealth(int _health)

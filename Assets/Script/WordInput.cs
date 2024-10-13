@@ -21,12 +21,19 @@ public class WordInput : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "DeathScene")
             {
-                if(Input.anyKey)
-                {
-                    SceneManager.LoadScene("Level1");
-                }
+                Debug.Log("Death");
+                StartCoroutine(Waiting());
             }
             
+        }
+    }
+
+    private IEnumerator Waiting()
+    {
+        yield return new WaitForSeconds(0.01f);
+        if(Input.anyKey)
+        {
+            SceneManager.LoadScene("Level1");
         }
     }
 }

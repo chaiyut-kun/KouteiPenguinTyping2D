@@ -84,6 +84,15 @@ public class WordManager : MonoBehaviour
             has_active_word = false;
 			words.Remove(active_word);
             
+            if(score % 100 == 0)
+            {
+                if (health < 50)
+                {
+                    health+=1;
+                    PlayerHeart.SetHealth(health);
+                    penguin_health.text = health.ToString();
+                }
+            }
             animator.SetBool("Typing",false);
             IsNextLevel();
             
