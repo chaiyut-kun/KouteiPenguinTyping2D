@@ -103,7 +103,7 @@ public class WordManager : MonoBehaviour
     private void IsNextLevel()
     {
         
-        if (score % 10 == 0 )
+        if (score % 150 == 0 )
         {
             
             
