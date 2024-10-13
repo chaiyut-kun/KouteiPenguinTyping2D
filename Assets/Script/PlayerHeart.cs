@@ -28,7 +28,7 @@ public static class PlayerHeart
     
     public static void Reset()
     {
-        health = 10;
+        health = 50;
     }
     
 }

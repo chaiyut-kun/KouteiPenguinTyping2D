@@ -30,7 +30,7 @@ public class WordInput : MonoBehaviour
 
     private IEnumerator Waiting()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.09f);
         if(Input.anyKey)
         {
             SceneManager.LoadScene("Level1");

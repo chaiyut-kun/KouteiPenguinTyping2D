@@ -459,8 +459,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.0770006, y: 0}
-  m_SizeDelta: {x: 356.154, y: 50}
+  m_AnchoredPosition: {x: 8.025, y: 4.464}
+  m_SizeDelta: {x: 1535.276, y: 212.303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856300115
 MonoBehaviour:
@@ -593,8 +593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102, y: 84}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -453.553, y: 361.1332}
+  m_SizeDelta: {x: 862.141, y: 212.303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935145623
 MonoBehaviour:
@@ -643,8 +643,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: 0}
-  m_SizeDelta: {x: 450, y: 253}
+  m_AnchoredPosition: {x: -13.86, y: 4.464}
+  m_SizeDelta: {x: 1939.818, y: 1074.257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798966487
 MonoBehaviour:
@@ -893,8 +893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260.1, y: 82.1}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 1219, y: 346}
+  m_SizeDelta: {x: 862.141, y: 212.303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830207040
 MonoBehaviour:
@@ -943,8 +943,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1019,8 +1019,8 @@ Transform:
   m_GameObject: {fileID: 1904965666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -112.6, y: 13.8, z: -103.73124}
-  m_LocalScale: {x: 2.039421, y: 2.039421, z: 2.039421}
+  m_LocalPosition: {x: -490.2, y: 62.7, z: -103.73124}
+  m_LocalScale: {x: 9.4935055, y: 9.4935055, z: 9.4935055}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1830207039}

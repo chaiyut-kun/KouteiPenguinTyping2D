@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -103,7 +102,7 @@ public class WordManager : MonoBehaviour
     private void IsNextLevel()
     {
         
-        if (score % 150 == 0 )
+        if (score % 100 == 0 )
         {
             
             
