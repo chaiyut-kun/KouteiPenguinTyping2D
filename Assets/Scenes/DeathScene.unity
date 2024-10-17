@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 357370791}
   - component: {fileID: 357370790}
   - component: {fileID: 357370792}
+  - component: {fileID: 357370793}
   m_Layer: 0
   m_Name: KouteiPenguin
   m_TagString: Untagged
@@ -228,6 +229,102 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &357370793
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357370789}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1267,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2845668071027638557, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 5467921114373100770}
+    - target: {fileID: 2845668071027638557, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
       propertyPath: nextlvl
       value: 
       objectReference: {fileID: 1026763086}
@@ -1185,6 +1286,26 @@ PrefabInstance:
       propertyPath: penguin_health
       value: 
       objectReference: {fileID: 1642148680}
+    - target: {fileID: 3854739905596575055, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 8300000, guid: 91e0b290f1d3ddf4db7a0bf1762963e6, type: 3}
+    - target: {fileID: 3854739905596575055, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 357370793}
+    - target: {fileID: 3854739905596575055, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+      propertyPath: typed
+      value: 
+      objectReference: {fileID: 8300000, guid: f51a4cec830e033499baef7f617eb941, type: 3}
+    - target: {fileID: 3854739905596575055, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+      propertyPath: typing
+      value: 
+      objectReference: {fileID: 8300000, guid: b339339b133ee6c4d9fa37660cdc069f, type: 3}
+    - target: {fileID: 3854739905596575055, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+      propertyPath: wrongtyped
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f977b15153fca44695b540672ebc359, type: 3}
     - target: {fileID: 4517683979526030129, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
       propertyPath: m_Name
       value: WordManager
@@ -1206,6 +1327,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+--- !u!114 &5467921114373100770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3854739905596575055, guid: bdd3397044836ff4e8ad0c9188b782f9, type: 3}
+  m_PrefabInstance: {fileID: 5467921114373100769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52801d9d6a96cb74995bed63b0fc4ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

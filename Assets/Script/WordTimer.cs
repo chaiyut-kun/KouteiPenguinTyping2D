@@ -9,7 +9,7 @@ public class WordTimer : MonoBehaviour
 {
     public WordManager word_manager; 
     
-    public float delay = 2f;
+    public float delay = 1f;
     private float nextword_time = 1f;
 
     private void Update()
@@ -17,8 +17,8 @@ public class WordTimer : MonoBehaviour
         if (Time.time >= nextword_time)
         {
             word_manager.Addword();
-            nextword_time = Time.time + delay*2.2f;
-            delay -= 0.00009f;
+            nextword_time = Time.time + delay*2.5f;
+            delay -= 0.09f;
         }
     }
 

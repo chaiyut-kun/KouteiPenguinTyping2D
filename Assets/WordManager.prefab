@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4720570671324400741}
   - component: {fileID: 299112508070431197}
   - component: {fileID: 1157405300568806333}
+  - component: {fileID: 3854739905596575055}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -48,6 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words: []
+  word_spawner: {fileID: 0}
+  point: {fileID: 0}
+  penguin_health: {fileID: 0}
+  score: 0
+  animator: {fileID: 0}
+  nextlvl: {fileID: 0}
 --- !u!114 &4720570671324400741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8171b50bac9584fab4cb21b8917875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  word_manager: {fileID: 0}
+  delay: 2
 --- !u!114 &299112508070431197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39451f4f3533304abef0a1b1fdd994f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  word_prefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &1157405300568806333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,3 +96,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word_mnger: {fileID: 2845668071027638557}
+--- !u!114 &3854739905596575055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517683979526030129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52801d9d6a96cb74995bed63b0fc4ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -21,6 +21,7 @@ public class WordManager : MonoBehaviour
     public TextMeshProUGUI nextlvl;
     private bool nextlvl_status;
     private int deadzone = -30;
+    public Sound sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,12 +52,14 @@ public class WordManager : MonoBehaviour
         {
             if(active_word.NextLetter() == letter)
             {
+                sound.PlayTyping();
                 active_word.TypeLetter();
                 animator.SetBool("Typing",true);
             }
             else 
             {
                 WrongType();
+                
             }
         }
         else 
@@ -68,6 +71,7 @@ public class WordManager : MonoBehaviour
                     active_word = word;
                     has_active_word = true;
                     word.TypeLetter();
+                    sound.PlayTyping();
                     animator.SetBool("Typing",true);
                     break;
                 }
@@ -75,6 +79,7 @@ public class WordManager : MonoBehaviour
         }
         if (has_active_word && active_word.WordTyped()) 
         {
+            sound.PlayTyped();
             animator.SetTrigger("Typed");
             
             score += 10;
@@ -161,6 +166,7 @@ public class WordManager : MonoBehaviour
         PlayerHeart.SetHealth(health);
         animator.SetTrigger("WrongType");
         penguin_health.text = health.ToString();
+        sound.WrongTyped();
         IsAlive();
         
     }
